@@ -18,14 +18,32 @@ public class JavaSubstringsComparisons {
         // 'largest' must be the lexicographically largest substring of length 'k'
 
 
+        /*Wrong way. Better to separate findMax and findMin
         for (int i = 0; i <= s.length() - k; i++) {
             String substring = s.substring(i, i + k);
+            //System.out.println(substring);
             if (substring.compareTo(largest) > 0) {
                 largest = substring;
-            } else {
-                if (substring.compareTo(smallest) < 0) {
-                    smallest = substring;
-                }
+            }
+            else if (smallest.equals("") || substring.compareTo(smallest) < 0) {
+                smallest = substring;
+            }
+        }
+         */
+
+
+        for (int i = 0; i <= s.length() - k; i++) {
+            String substring = s.substring(i, i + k);
+            //System.out.println(substring);
+            if (substring.compareTo(largest) > 0) {
+                largest = substring;
+            }
+        }
+
+        for (int i = 0; i <= s.length() - k; i++) {
+            String substring = s.substring(i, i + k);
+            if (smallest.equals("") || substring.compareTo(smallest) < 0) {
+                smallest = substring;
             }
         }
 
