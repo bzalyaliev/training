@@ -5,28 +5,28 @@ import java.util.*;
 public class JavaAnagrams {
 
     static boolean isAnagram(String a, String b) {
-        boolean result;
         boolean resultFinal = true;
         Map<Character, Integer> mapForA = getCharacters(a);
         Map<Character, Integer> mapForB = getCharacters(b);
-        List<Boolean> booleansResultSequence = new ArrayList<>();
-
 
         /*[a: 1, b: 2]
           [h: 2, z: 1]
         */
-        for (Map.Entry<Character, Integer> entry : mapForA.entrySet()) {
-            if (mapForB.containsKey(entry.getKey())) {
-                result = mapForB.get(entry.getKey()).equals(entry.getValue());
-                booleansResultSequence.add(result);
-            } else {
-                resultFinal = false;
-            }
+
+        if (mapForB.size() != mapForA.size()) {
+            return false;
         }
 
-
-        if (mapForB.size() != mapForA.size() || booleansResultSequence.contains(false)) {
-            resultFinal = false;
+        for (Map.Entry<Character, Integer> entry : mapForA.entrySet()) {
+            if (mapForB.containsKey(entry.getKey())) {
+                resultFinal = mapForB.get(entry.getKey()).equals(entry.getValue());
+                if (!resultFinal) {
+                    break;
+                }
+            } else {
+                resultFinal = false;
+                break;
+            }
         }
         return resultFinal;
     }
