@@ -5,29 +5,35 @@ import java.util.*;
 public class JavaAnagrams {
 
     static boolean isAnagram(String a, String b) {
-        // Complete the function
-
-        boolean result = true;
+        boolean result = false;
+        boolean resultFinal = true;
         Map<Character, Integer> mapForA = getCharacters(a);
         Map<Character, Integer> mapForB = getCharacters(b);
+        List<Boolean> booleansResultSequence = new ArrayList<>();
 
         /*[a: 1, b: 2]
           [h: 2, z: 1]
         */
         for (Map.Entry<Character, Integer> entry : mapForA.entrySet()) {
             result = mapForB.get(entry.getKey()).equals(entry.getValue());
+            booleansResultSequence.add(result);
+
         }
-        return result;
+        System.out.println(booleansResultSequence);
+        if (booleansResultSequence.contains(false)) {
+            resultFinal = false;
+        }
+        return resultFinal;
     }
 
-    private static Map<Character, Integer> getCharacters(String a) {
-        char[] characters = a.toCharArray();
-        Map<Character, Integer> map = new HashMap<Character, Integer>();
+
+    private static Map<Character, Integer> getCharacters(String string) {
+        Map<Character, Integer> map = new HashMap<>();
+        char[] characters = string.toCharArray();
         for (Character character : characters) {
-            // если уже есть ключ, то прибавляем единицу
+            character = Character.toLowerCase(character);
             if (map.containsKey(character)) {
                 map.put(character, map.get(character) + 1);
-                // Если нет, то кладем ключ и присваиваем значение 1
             } else {
                 map.put(character, 1);
             }
