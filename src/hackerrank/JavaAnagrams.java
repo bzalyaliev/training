@@ -5,7 +5,7 @@ import java.util.*;
 public class JavaAnagrams {
 
     static boolean isAnagram(String a, String b) {
-        boolean result = false;
+        boolean result;
         boolean resultFinal = true;
         Map<Character, Integer> mapForA = getCharacters(a);
         Map<Character, Integer> mapForB = getCharacters(b);
@@ -17,15 +17,14 @@ public class JavaAnagrams {
         for (Map.Entry<Character, Integer> entry : mapForA.entrySet()) {
             result = mapForB.get(entry.getKey()).equals(entry.getValue());
             booleansResultSequence.add(result);
-
         }
-        System.out.println(booleansResultSequence);
-        if (booleansResultSequence.contains(false)) {
+
+        if (mapForB.size() != mapForA.size() || booleansResultSequence.contains(false)) {
             resultFinal = false;
         }
+
         return resultFinal;
     }
-
 
     private static Map<Character, Integer> getCharacters(String string) {
         Map<Character, Integer> map = new HashMap<>();
