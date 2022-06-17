@@ -30,8 +30,6 @@ public class JavaSubarray {
                 if (sum < 0) {
                     count++;
                 }
-
-                System.out.println(sum);
             }
         }
         System.out.println(count);
