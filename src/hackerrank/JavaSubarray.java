@@ -12,7 +12,6 @@ public class JavaSubarray {
 
         //length of array
         String length = scanner.nextLine();
-        int lengthArray = Integer.parseInt(length);
 
         //string with numbers from CL -> array of numbers
         String array = scanner.nextLine();
