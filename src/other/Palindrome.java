@@ -19,16 +19,8 @@ public class Palindrome {
         return result.equals(inputWord);
     }
 
-    public static boolean isTextPalindrome(String text) {
-        var chars = text.toLowerCase(Locale.ROOT).toCharArray();
-        var left = 0;
-        var right = chars.length - 1;
-        while (left < right) {
-            if (chars.[left] != chars[right])
-        }
-    }
-
     public static void main(String[] args) {
+        System.out.println(toCheckPalindromeInterview("ШАЛАШ"));
 
     }
 }
