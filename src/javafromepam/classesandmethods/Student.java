@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Student {
 
-    /*
+    /**
     Создать классы, спецификации которых приведены ниже.
     Определить конструкторы и методы setТип(), getТип(), toString().
     Определить дополнительно методы в классе, создающем массив объектов.
@@ -47,28 +47,85 @@ public class Student {
         super();
     }
 
+    public Student(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return surname + " " + name;
     }
 
-    public void getStudent() {
-
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
-    public static void main(String[] args) {
-        Student[] students = new Student[3];
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        Student student1 = new Student("Ivanov", "Ivan", "Ivanovich", "01.01.1990", "Lenina street", "+7123456789", "Physics", "2", "B777");
-        Student student2 = new Student("Petrov", "Petr", "Petrovich", "02.02.1990", "Gogolya street", "+7123456789", "Math", "2", "B778");
-        Student student3 = new Student("Sidorov", "Sidor", "Sidorovich", "03.03.1990", "Karla Marksa street", "+7123456789", "IT", "2", "B779");
+    public void setPatronymic(String patronymic) {
+        this.patronymic = patronymic;
+    }
 
-        students[0] = student1;
-        students[1] = student2;
-        students[2] = student3;
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
 
-        showStudentsByFaculty(students);
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public String getFaculty() {
+        return faculty;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public String getSurname() {
+        return surname;
     }
 
     private static void showStudentsByFaculty(Student[] students) {
@@ -78,5 +135,18 @@ public class Student {
             }
         }
     }
+
+    public static void main(String[] args) {
+        Student student1 = new Student("Ivanov", "Ivan", "Ivanovich", "01.01.1990", "Lenina street", "+7123456789", "Physics", "2", "B777");
+        Student student2 = new Student("Petrov", "Petr", "Petrovich", "02.02.1990", "Gogolya street", "+7123456789", "Math", "2", "B778");
+        Student student3 = new Student("Sidorov", "Sidor", "Sidorovich", "03.03.1990", "Karla Marksa street", "+7123456789", "IT", "2", "B779");
+
+        Student[] students = {student1, student2, student3};
+        showStudentsByFaculty(students);
+        System.out.println(student1.getSurname());
+    }
+
+
+
 
 }
