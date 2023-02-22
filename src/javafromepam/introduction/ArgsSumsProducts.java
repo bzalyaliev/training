@@ -1,16 +1,14 @@
 package javafromepam.introduction;
 
-import java.util.Arrays;
-
 public class ArgsSumsProducts {
 
     /*
     Ввести целые числа как аргументы командной строки, подсчитать их суммы и произведения. Вывести результат на консоль.
     How to run.
     In the terminal from src:
-    1. javac javafromepam/introduction/ArgsSumsProducts.java
+    1. javac main.java.com.github.bzalyaliev.javafromepam/introduction/ArgsSumsProducts.java
     2. ArgsSumsProducts.class will be generate.
-    3. java javafromepam.introduction.ArgsSumsProducts 1 2 3 4 5 6
+    3. java main.java.com.github.bzalyaliev.javafromepam.introduction.ArgsSumsProducts 1 2 3 4 5 6
      */
 
 

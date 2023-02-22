@@ -1,6 +1,6 @@
 package other;
 
-import java.util.function.Function;
+import java.util.ArrayList;
 
 public class Test {
 
@@ -18,6 +18,7 @@ public class Test {
         System.out.println((i1 ^ i2) < 4);
 
 
+        ArrayList<Integer> list = new ArrayList<>();
 
 
 

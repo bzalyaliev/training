@@ -9,9 +9,9 @@ public class ReverseCommandLineArguments {
     Отобразить в окне консоли аргументы командной строки в обратном порядке
     How to run.
     In the terminal from src:
-    1. javac javafromepam/introduction/ReverseCommandLineArguments.java
+    1. javac main.java.com.github.bzalyaliev.javafromepam/introduction/ReverseCommandLineArguments.java
     2. ReverseCommandLineArguments.class will be generate.
-    3. java javafromepam.introduction.ReverseCommandLineArguments Argument1 Argument2 Argument3 ArgsSumsProducts
+    3. java main.java.com.github.bzalyaliev.javafromepam.introduction.ReverseCommandLineArguments Argument1 Argument2 Argument3 ArgsSumsProducts
      */
 
     public static void main(String[] args) {

@@ -1,10 +1,5 @@
 package other;
 
-import java.sql.Time;
-import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.Locale;
-
 public class Palindrome {
 
     public static boolean toCheckPalindromeInterview(String inputWord) {
