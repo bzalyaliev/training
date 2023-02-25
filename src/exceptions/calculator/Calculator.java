@@ -1,4 +1,4 @@
-package other.calculator;
+package exceptions.calculator;
 
 public interface Calculator {
 

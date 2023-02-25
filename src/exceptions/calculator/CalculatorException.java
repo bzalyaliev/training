@@ -1,4 +1,4 @@
-package other.calculator;
+package exceptions.calculator;
 
 public class CalculatorException extends RuntimeException {
 
